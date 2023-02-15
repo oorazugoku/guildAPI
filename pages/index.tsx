@@ -448,7 +448,7 @@ const Home = ({ data }: Props) => {
 
 
   return (
-    <>
+    data ? <>
       {showModal && (
         <BasicModal
         body={<DonateButton />}
@@ -593,98 +593,98 @@ const Home = ({ data }: Props) => {
 
           <section className='flex flex-row items-center'>
             <img src='/deathKnight.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Death Knight')}>
               {classCounter.DeathKnight}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/demonHunter.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Demon Hunter')}>
               {classCounter.DemonHunter}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/druid.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Druid')}>
               {classCounter.Druid}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/evoker.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Evoker')}>
               {classCounter.Evoker}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/hunter.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Hunter')}>
               {classCounter.Hunter}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/mage.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Mage')}>
               {classCounter.Mage}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/monk.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Monk')}>
               {classCounter.Monk}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/paladin.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Paladin')}>
               {classCounter.Paladin}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/priest.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Priest')}>
               {classCounter.Priest}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/rogue.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Rogue')}>
               {classCounter.Rogue}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/shaman.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Shaman')}>
               {classCounter.Shaman}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/warlock.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Warlock')}>
               {classCounter.Warlock}
             </text>
           </section>
 
           <section className='flex flex-row items-center'>
             <img src='/warrior.png' className='h-6'/>
-            <text className=''>
+            <text style={setClassColor('Warrior')}>
               {classCounter.Warrior}
             </text
             >
           </section>
 
         </div>
-        
+
        </section>
         <div className='h-[20px] w-full fixed top-[130px] bg-[black] z-[50]'/>
 
@@ -944,6 +944,7 @@ const Home = ({ data }: Props) => {
         </section>
       </div>
     </>
+    : <>Blizzard is failing</>
   );
 }
 
