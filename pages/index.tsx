@@ -490,6 +490,7 @@ const Home = ({ data }: Props) => {
                 <button className='bg-[#188d93] hover:border-solid hover:bg-[#188d9350] h-8 text-[black] px-2 rounded-lg whitespace-nowrap' onClick={()=>handleFilterButton('IO')}>IO Score</button>
                 <button className='bg-[#188d93] hover:border-solid hover:bg-[#188d9350] h-8 text-[black] px-2 rounded-lg whitespace-nowrap' onClick={()=>handleFilterButton('Role')}>Role</button>
                 <button className='bg-[#188d93] hover:border-solid hover:bg-[#188d9350] h-8 text-[black] px-2 rounded-lg whitespace-nowrap' onClick={()=>handleFilterButton('Tier')}>Tier</button>
+
                 {rankFilter && (
                   <div className='absolute top-[80px] left-[15px] rounded-lg flex flex-col bg-[#434343] w-[50px]'>
                     {Object.values(data.Roster)
@@ -586,12 +587,105 @@ const Home = ({ data }: Props) => {
               <text>Appreciate the Site?</text>
               <Button variant='contained' className='bg-[#003655]' onClick={()=>setShowModal(!showModal)}>Donate Here</Button>
             </section>
-
-
           </div>
 
+        <div className='absolute left-40 top-[100px] flex flex-row gap-4 items-center'>
 
-        </section>
+          <section className='flex flex-row items-center'>
+            <img src='/deathKnight.png' className='h-6'/>
+            <text className=''>
+              {classCounter.DeathKnight}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/demonHunter.png' className='h-6'/>
+            <text className=''>
+              {classCounter.DemonHunter}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/druid.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Druid}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/evoker.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Evoker}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/hunter.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Hunter}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/mage.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Mage}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/monk.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Monk}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/paladin.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Paladin}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/priest.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Priest}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/rogue.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Rogue}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/shaman.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Shaman}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/warlock.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Warlock}
+            </text>
+          </section>
+
+          <section className='flex flex-row items-center'>
+            <img src='/warrior.png' className='h-6'/>
+            <text className=''>
+              {classCounter.Warrior}
+            </text
+            >
+          </section>
+
+        </div>
+        
+       </section>
         <div className='h-[20px] w-full fixed top-[130px] bg-[black] z-[50]'/>
 
         <div className={`flex flex-row fixed left-0 top-[150px] bg-[black] z-50`}>
