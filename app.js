@@ -7,16 +7,12 @@ const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const { environment } = require('./config');
 const isProduction = environment === 'production';
-const routes = require('./routes');
 
 
 const app = express();
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json());
-
-app.use(routes); // Connect all the routes
-
 
 
 // Security Middleware
@@ -41,6 +37,9 @@ csurf({
     }
 })
 );
+
+const routes = require('./routes');
+app.use(routes); // Connect all the routes
 
 
 module.exports = app;
