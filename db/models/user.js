@@ -1,9 +1,5 @@
 'use strict';
-const {
-  Model,
-  Validator
-} = require('sequelize');
-
+const { Model, Validator } = require('sequelize');
 const bcrypt = require('bcryptjs');
 
 
@@ -15,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       return { id, username, email }
     }
 
-    validatePassword() {
+    validatePassword(password) {
       return bcrypt.compareSync(password, this.hashedPassword.toString());
     }
 
