@@ -4,6 +4,7 @@ import { fetchAllData } from './api/blizzardAPI';
 import BasicModal from '../components/modal/Modal';
 import { Button } from '@mui/material';
 import Fade from '@mui/material/Fade';
+import Link from 'next/link';
 
 
 interface Props {
@@ -788,11 +789,13 @@ const Home = ({ data }: Props) => {
                     className='font-bold text-sm flex items-center justify-center min-w-[30px] border-0 border-r-[1px] border-[#34343430] text-[#732435]'>
                     {member.rank}
                     </text>
-                  <text
-                    className='font-bold text-sm min-w-[140px] border-0 border-r-[3px] flex items-center border-[black] pl-2'
-                    style={setClassColor(member.character.key.character_class.name)}>
-                    {member.character.name}
+                  <Link href={`https://worldofwarcraft.blizzard.com/en-us/character/us/${member.character.realm.slug}/${member.character.name}`} className='' target='_blank'>
+                    <text
+                      className='font-bold text-sm min-w-[140px] border-0 border-r-[3px] flex items-center border-[black] pl-2 hover:opacity-50'
+                      style={setClassColor(member.character.key.character_class.name)}>
+                      {member.character.name}
                     </text>
+                  </Link>
                 </div>
                 <div className='flex flex-row'>
                   {!showRole && (<text
