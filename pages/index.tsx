@@ -5,6 +5,7 @@ import BasicModal from '../components/modal/Modal';
 import { Button } from '@mui/material';
 import Fade from '@mui/material/Fade';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 interface Props {
