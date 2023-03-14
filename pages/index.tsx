@@ -320,7 +320,6 @@ const Home = ({ data }: Props) => {
 
   const handleRole = (toon: any) => {
     const charClass = toon.character_class.name
-    const role = toon.active_spec.key.role.name
     const spec = toon.active_spec.name
 
     if (charClass === 'Paladin') {
